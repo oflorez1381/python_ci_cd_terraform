@@ -52,6 +52,7 @@ jobs:
            echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
            ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
            sudo apt install python3 &&
+           rm -r /home/ubuntu/python_ci_cd_terraform &&
            git clone https://github.com/oflorez1381/python_ci_cd_terraform.git &&
            cd python_ci_cd_terraform  &&
            git checkout main &&
@@ -59,6 +60,5 @@ jobs:
            git reset --hard origin/main &&
            git pull origin main &&
            cd scripts &&
-           python3 fetch_jobs.py &&
-           rm -r /home/ubuntu/python_ci_cd_terraform
+           python3 fetch_jobs.py
            '
