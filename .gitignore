@@ -1,0 +1,6 @@
+creds/*
+**.csv
+terraform/*
+.DS_Store
+.env
+.idea

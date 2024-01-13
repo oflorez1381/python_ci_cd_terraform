@@ -1,0 +1,7 @@
+black==23.7.0
+pandas
+requests
+boto3
+pylint
+toml
+python-dotenv
