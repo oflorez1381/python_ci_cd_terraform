@@ -54,6 +54,8 @@ jobs:
            rm -r /home/ubuntu/script &&
            mkdir /home/ubuntu/script &&
            cd /home/ubuntu/script &&
+           git clone https://github.com/oflorez1381/python_ci_cd_terraform.git &&
+           cd python_ci_cd_terraform &&
            git checkout main &&
            git fetch --all &&
            git reset --hard origin/main &&
